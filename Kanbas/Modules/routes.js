@@ -1,4 +1,4 @@
-import db from "../Database/index.js";
+import db from "../DataBase/index.js";
 
 export default function ModuleRoutes(app) {
     app.put("/api/modules/:mid", (req, res) => {
