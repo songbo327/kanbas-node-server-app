@@ -35,7 +35,7 @@ export default function AnswersRoutes(app) {
             for (let i = 0; i < keys.length; i++) {
                 let question = questions.find(question => question._id.toString() === keys[i]);
                 if (question) {
-                    const correct = question.correctAnswer === values[i];
+                    const correct = question.correctAnswer.toLowerCase() === values[i].toLowerCase();
                     if (correct) {
                         points += question.points;
                     }
